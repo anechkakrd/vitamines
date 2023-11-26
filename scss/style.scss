@@ -1,0 +1,120 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+
+$purple: #D07CC6;
+$red: rgba(255,95,78,1);
+
+.header{
+    background: url("../img/fon1.png") center/cover no-repeat;
+    // justify-content: end;
+}
+
+.container{
+    max-width: 1140px;
+    align-items: center;
+}
+
+.row-blok1{
+    margin-top: 3vw;
+}
+
+.blok2{
+    //min-height: 1933px;
+    background: url("../img/fon_blok3.png") center/cover no-repeat;
+    justify-content: end;
+    align-items: center;
+}
+
+.botles{
+    padding-top:  10%;
+}
+
+.slaider{
+    padding-top: 20%;
+
+}
+
+.blok4{
+    //min-height: 748px;
+    background: url("../img/fon4.png") center/cover no-repeat;
+    justify-content: end;
+    align-items: center;
+}
+
+.sea{
+    background: url("../img/sea.png") center bottom/cover no-repeat;
+}
+.btn-primary, .popover-header{
+    background: rgb(255,161,144);
+    background: linear-gradient(34deg, rgba(255,161,144,1) 0%, rgba(255,95,78,1) 100%);
+}
+.popover-header{
+    color: white;
+}
+.popover-body{
+    color: $purple
+}
+.accordion-button::after{
+    background-image: none;
+    width: 0;
+    height: 0;
+}
+.custom-round{
+    border-radius: 150px/70px;
+    -webkit-border-radius: 150px/70px;
+    -moz-border-radius: 150px/70px;
+    -ms-border-radius: 150px/70px;
+    -o-border-radius: 150px/70px;
+}
+.svg {
+    position: absolute;
+    width: 0;
+    height: 0;
+  }
+  .clipped {
+    width: 100%;
+    height: 70vw;
+    max-width: 1000px;
+    max-height: 600px;
+    background: white;
+    -webkit-clip-path: url(#my-clip-path);
+    clip-path: url(#my-clip-path);
+  }
+
+  .card-title{
+    color: $red;
+  }
+  .card-text{
+    color: $purple;
+  }
+  .shadow-custom{
+    box-shadow: 0 3rem 2rem blue ;
+  }
+
+@media (max-width: 484px) {
+    .clipped{
+        width: 100%;
+        height: 150vw;
+    }
+    .card-text{
+        display: none;
+    }
+}
+@media (min-width: 484.1px) and (max-width:765px){
+    .clipped{
+        width: 100%;
+        height: 200vw;
+        background: url(/img/card-img-1.png);
+    }
+    .card-body{
+        display: none;
+    }
+
+    .carousel-item{
+        height:100vw;
+    }
+
+}
