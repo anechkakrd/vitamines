@@ -40,7 +40,7 @@
             </li>
           </ul>
         
-          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0 d-flex flex-row">
             <li>
               <a class="navbar-brand" href="#">
                 <img src="img/watsapp.svg" alt="Bootstrap" width="50" height="50">
@@ -113,13 +113,17 @@
 </div>
 
 <script>
-  document.addEventListener("DOMContentLoaded", function(){
-      var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'));
-      var popoverList = popoverTriggerList.map(function(element){
-          return new bootstrap.Popover(element);
-      });
+document.addEventListener("DOMContentLoaded", () => {
+  const popoverTriggerList = Array.from(document.querySelectorAll('[data-bs-toggle="popover"]'));
+  const popoverList = popoverTriggerList.map(element => {
+    const popover = new bootstrap.Popover(element);
+    element.addEventListener('shown.bs.popover', () => {
+      setTimeout(() => popover.hide(), 2500);
+    });
+    return popover;
   });
-</script>
+});
+  </script>
 
 <div id="tow" class="blok2">
   <div class="container">
